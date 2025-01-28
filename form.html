@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      
+        div{
+            margin: 10px;
+        }
+        fieldset{
+            margin-top: 10px;
+            border: 2px solid rgb(96, 143, 27);
+            border-radius: 20px;
+            width: 450PX;
+        }
+        
+        legend{
+            color: blue;
+        }
+        
+        
+    </style>
+    <title>Formularios</title>
+</head>
+<header>
+    <h1>Formulario</h1>
+</header>
+<body>
+    <form action="cadastro.php" autocomplete="on" method="post">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </div>
+            <div>
+                <input type="radio" name="sexo" id="isxmas" value="M">
+                <label for="isxmas">Masculino</label>
+                <input type="radio" name="sexo" id="isxfem" value="F">
+                <label for="isxfem">Feminino</label>
+            </div>
+            <div>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Médico</option>
+                    <option>Engenheiro</option>
+                    <option >Professor</option>
+                    <option>Advogado</option>
+                    <option>Enfermeiro</option>
+                    <option>Psicólogo</option>
+                    <option>Arquiteto</option>
+                    <option>Analista de Sistemas</option>
+                    <option>Designer</option>
+                    <option>Contador</option>
+                    <option>Veterinário</option>
+                    <option>Farmacêutico</option>
+                    <option>Administrador</option>
+                    <option>Eletricista</option>
+                    <option>Motorista</option>
+                    <option>Padeiro</option>
+                    <option>Garçom</option>
+                    <option>Marceneiro</option>
+                    <option>Pedreiro</option>
+                    <option>Jornalista</option>
+                    <option>Policial</option>
+                    <optio>Bombeiro</option>
+                    <option>Soldador</option>
+                    <option>Cozinheiro</option>
+                    <option>Auxiliar Administrativo</option>
+                    <option>Recepcionista</option>
+                
+                </datalist>
+            </div>
+            <div>
+                <label for="iest">Estado</label>
+                <select name="estado" class="select">
+                    <option value="" selected id="select">---Escolha---</option>
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="PA">Pará (PA)</option>
+                        <option value="RO">Rondônia (RO)</option>
+                        <option value="RR">Roraima (RR)</option>
+                        <option value="TO">Tocantins (TO)</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="MA">Maranhão (MA)</option>
+                        <option value="PB">Paraíba (PB)</option>
+                        <option value="PE">Pernambuco (PE)</option>
+                        <option value="PI">Piauí (PI)</option>
+                        <option value="RN">Rio Grande do Norte (RN)</option>
+                        <option value="SE">Sergipe (SE)</option>
+                    </optgroup>
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="GO">Goiás (GO)</option>
+                        <option value="MT">Mato Grosso (MT)</option>
+                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espírito Santo (ES)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná (PR)</option>
+                        <option value="RS">Rio Grande do Sul (RS)</option>
+                        <option value="SC">Santa Catarina (SC)</option>
+                    </optgroup>
+
+                </select>
+                
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Escolha dois número</legend>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="" id="">
+
+        </fieldset>
+
+
+        <fieldset id="um">
+            <legend>contado</legend>
+            <div>
+            
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </div>
+            <div>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxxx-xxxx">
+            </div>
+        </fieldset>
+        <fieldset id="dois">
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas">
+            <label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esfut" id="iesfut">
+            <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esnat" id="iesnat" checked>
+            <label for="iesnat">Natação</label><br>
+            <input type="checkbox" name="esten" id="iesten">
+            <label for="iesnat">Tênis</label><br>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label for="imsg">Mensagen:</label><br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Outros</legend>
+            <div>
+                <label for="cor">Cor Preferida:</label>
+                <input type="color" name="cor" id="icor" value="#ff4400"> 
+            </div>
+            <div>
+                <input type="range" name="nivel" id="inivel" min="2" max="10" >
+            </div>
+            <div>
+                <label for="foto">Foto do Perfil</label>
+                <input type="file" name="foto" id="ifoto">
+            </div>
+        </fieldset>
+            
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+    </form>
+    
+</body>
+</html>
